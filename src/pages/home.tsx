@@ -41,7 +41,7 @@ const Home = () => {
         <br />
         <Divider />
         <br />
-        <Grid container xs={12}>
+        <Grid container>
           <Grid item xs={12} md={6}>
             <img src={img1} className={classes.contentImg} alt={'content'} />
           </Grid>
@@ -50,7 +50,7 @@ const Home = () => {
               {
                 features1.map(feature => {
                   return (
-                    <ListItem>
+                    <ListItem key={feature.title}>
                       <ListItemIcon>
                         {feature.image}
                       </ListItemIcon>
@@ -63,13 +63,13 @@ const Home = () => {
           </Grid>
         </Grid>
         <br />
-        <Grid container xs={12}>
+        <Grid container>
           <Grid item xs={12} md={6}>
             <List>
               {
                 features2.map(feature => {
                   return (
-                    <ListItem>
+                    <ListItem key={feature.title}>
                       <ListItemIcon>
                         {feature.image}
                       </ListItemIcon>

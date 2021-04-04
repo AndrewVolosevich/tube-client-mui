@@ -19,9 +19,6 @@ const useStyles = makeStyles({
     padding: "0px",
     height: "100%"
   },
-  link: {
-    marginRight: "10px"
-  }
 })
 
 const WebLinks = () => {
@@ -35,7 +32,6 @@ const WebLinks = () => {
           webLinks.map((link) => {
             return (
               <Button
-                className={classes.link}
                 key={link.title}
                 color={"inherit"}
                 to={link.path}

@@ -36,7 +36,7 @@ const Header = () => {
         <Toolbar>
           <Container fixed maxWidth={"md"} className={classes.container}>
             <Typography variant="h4" className={classes.title}>
-              Logo
+              Tube Factory
             </Typography>
             <Box>
               <Hidden mdUp >

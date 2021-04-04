@@ -13,6 +13,7 @@ import Order from '../pages/order';
 import Contacts from "../pages/contacts";
 import Auth from "../pages/auth";
 import PageTitle from "../components/page-title/page-title";
+import Cart from "../pages/cart";
 
 const useStyles = makeStyles(theme => {
   return {
@@ -45,6 +46,9 @@ const App = () => {
               </Route>
               <Route path={'/order'} exact>
                 <Order />
+              </Route>
+              <Route path={'/cart'} exact>
+                <Cart />
               </Route>
               <Route path={'/contacts'} exact>
                 <Contacts />

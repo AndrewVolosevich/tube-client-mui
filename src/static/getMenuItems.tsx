@@ -5,6 +5,7 @@ import {
   Build as BuildIcon,
   ShoppingCart as ShoppingCartIcon,
   PhoneIphone as PhoneIphoneIcon,
+  Store as StoreIcon,
   Person as PersonIcon,
 } from '@material-ui/icons';
 
@@ -23,6 +24,11 @@ export const getMenuItems = (): MenuItem[] => {
     {
       title: `Заказать`,
       path: "/order",
+      image: <StoreIcon />,
+    },
+    {
+      title: `Корзина`,
+      path: "/cart",
       image: <ShoppingCartIcon />,
     },
     {
