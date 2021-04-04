@@ -1,9 +1,14 @@
 import React, {useState} from 'react';
-import {AppBar, Tabs, Tab, Box, Typography, Container, Paper} from '@material-ui/core';
+import {AppBar, Tabs, Tab, Box, Container, Paper} from '@material-ui/core';
 import {makeStyles} from "@material-ui/core/styles";
+import {indigo} from '@material-ui/core/colors';
 import SignIn from "../components/forms/sign-in";
 import SignUp from "../components/forms/sign-up";
+
 const useStyles = makeStyles({
+  tabs: {
+    backgroundColor: indigo["400"]
+  },
   tabsContent: {
     padding: "15px",
     marginTop: "1px",
@@ -11,7 +16,7 @@ const useStyles = makeStyles({
 })
 
 
-function TabPanel(props: any) {
+const TabPanel = (props: any) => {
   const { children, value, index, ...other } = props;
   const classes = useStyles()
   return (
@@ -32,13 +37,13 @@ function TabPanel(props: any) {
 }
 
 const Auth = () => {
+  const classes = useStyles()
   const [value, setValue] = useState<number>(0)
-
   return (
     <>
       <br />
       <Container fixed maxWidth={"md"}>
-        <AppBar position="static">
+        <AppBar position="static" className={classes.tabs}>
           <Tabs variant={"fullWidth"} value={value} onChange={(e, newValue) => {
             setValue(newValue)
           }} aria-label="simple tabs example">

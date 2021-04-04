@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Grid, ListItem, ListItemAvatar, Avatar, ListItemText, ListItemIcon, List} from '@material-ui/core';
+import {Container, Grid, ListItem, ListItemAvatar, ListItemText, ListItemIcon, List} from '@material-ui/core';
 import {
   Room as RoomIcon,
   Phone as PhoneIcon,
@@ -64,6 +64,7 @@ const Contacts = () => {
         <Grid container>
           <Grid item xs={12} md={6}>
             <iframe
+              title={'yandex maps'}
               src="https://yandex.ru/map-widget/v1/?um=constructor%3A0887d24463875e33c0f03c6a657dbb4b0c686e5d571f026ada396b0270bd9963&amp;source=constructor"
               width="100%"
               height="500"

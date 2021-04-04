@@ -71,7 +71,6 @@ const ContactForm = () => {
                 label="Ваше имя"
                 name="name"
                 autoComplete="name"
-                autoFocus
                 value={formik.values.name}
                 onChange={formik.handleChange}
                 error={!!formik.errors.name}

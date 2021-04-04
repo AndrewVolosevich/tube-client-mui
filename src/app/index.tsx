@@ -12,12 +12,18 @@ import Products from "../pages/products";
 import Order from '../pages/order';
 import Contacts from "../pages/contacts";
 import Auth from "../pages/auth";
+import PageTitle from "../components/page-title/page-title";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => {
+  return {
   main: {
-    minHeight: "80vh"
+    minHeight: "82vh",
+    marginTop: theme.spacing(8),
+    [theme.breakpoints.up("sm")]: {
+      marginTop: "0px",
+    }
   }
-})
+}})
 
 const App = () => {
   const classes = useStyles()
@@ -28,6 +34,7 @@ const App = () => {
       <ThemeProvider theme={theme({mode: themeMode})}>
         <Router>
           <Header/>
+          <PageTitle />
           <main className={classes.main}>
             <Switch>
               <Route path={'/'} exact>
